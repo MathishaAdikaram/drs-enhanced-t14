@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="676.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="disasterresponse.controllers.CurrentDisasterStatusController">
+    <TableView fx:id="disasterTable" layoutX="50.0" layoutY="30.0" prefHeight="300" prefWidth="600.0">
+        <columns>
+            <TableColumn fx:id="priorityColumn" prefWidth="95.99996566772461" text="Priority">
+                <cellValueFactory>
+                    <PropertyValueFactory property="priority" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="typeColumn" prefWidth="128.80006408691406" text="Disaster Type">
+                <cellValueFactory>
+                    <PropertyValueFactory property="type" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="locationColumn" prefWidth="106.4000244140625" text="Location">
+                <cellValueFactory>
+                    <PropertyValueFactory property="location" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="severityColumn" prefWidth="102.39996337890625" text="Severity">
+                <cellValueFactory>
+                    <PropertyValueFactory property="severity" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="timeSinceColumn" prefWidth="164.0" text="Time Since Reporting">
+                <cellValueFactory>
+                    <PropertyValueFactory property="timeSinceReporting" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    
+    <Button fx:id="refreshButton" layoutX="50.0" layoutY="344.0" onAction="#handleRefresh" text="Refresh" />
+    <Button fx:id="requestResourceButton" disable="true" layoutX="130.0" layoutY="344.0" onAction="#handleRequestResource" text="Request Resource" />
+    
+    <TableView fx:id="updateTable" layoutX="50.0" layoutY="390.0" prefHeight="200" prefWidth="770.0">
+        <columns>
+            <TableColumn fx:id="timeOfUpdateColumn" prefWidth="123.99996566772461" text="Time of Update">
+                <cellValueFactory>
+                    <PropertyValueFactory property="messageTime" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="departmentColumn" prefWidth="144.00001525878906" text="Department">
+                <cellValueFactory>
+                    <PropertyValueFactory property="departmentName" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="roleColumn" prefWidth="80.7999267578125" text="Role">
+                <cellValueFactory>
+                    <PropertyValueFactory property="roleName" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="nameColumn" prefWidth="131.99993896484375" text="Name">
+                <cellValueFactory>
+                    <PropertyValueFactory property="messagedByFullName" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="messageColumn" prefWidth="287.9999755859375" text="Message">
+                <cellValueFactory>
+                    <PropertyValueFactory property="message" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    
+    <Button fx:id="addUpdateButton" disable="true" layoutX="50.0" layoutY="609.0" onAction="#handleAddUpdate" text="Add Update" />
+</AnchorPane>

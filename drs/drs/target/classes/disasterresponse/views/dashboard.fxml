@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="737.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="disasterresponse.controllers.DashboardController">
+    <children>
+        <Label fx:id="userInfoLabel" layoutX="20" layoutY="20" />
+        <Button fx:id="signOutButton" layoutX="783.0" layoutY="16.0" onAction="#handleSignOut" text="Sign Out" />
+
+        <TabPane fx:id="dashboardTabPane" layoutX="11.0" layoutY="50" prefHeight="676.0" prefWidth="834.0">
+            <Tab closable="false" text="Welcome">
+                <AnchorPane prefHeight="636.0" prefWidth="674.0">
+                    <Label layoutX="50" layoutY="100" style="-fx-font-size: 24px;" text="Welcome To The Disaster Response System" />
+                </AnchorPane>
+            </Tab>
+            <Tab fx:id="usersTab" closable="false" text="Users" />
+            <Tab fx:id="reportDisasterTab" closable="false" text="Report Disaster" />
+            <Tab fx:id="viewAllDisastersTab" closable="false" text="View All Disasters" />
+            <Tab fx:id="sendInitialResourcesTab" closable="false" text="Send Initial Resources" />
+            <Tab fx:id="currentDisasterStatusTab" closable="false" text="Current Disaster Status" />
+        </TabPane>
+    </children>
+</AnchorPane>
