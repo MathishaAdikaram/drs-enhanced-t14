@@ -1,10 +1,11 @@
-package disasterresponse.dao;
+package au.pathum.disasterresponse.dao;
 
-import disasterresponse.models.Disaster;
-import disasterresponse.services.DatabaseUtil;
+import au.pathum.disasterresponse.models.Disaster;
+import au.pathum.disasterresponse.services.DatabaseUtil;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockedStatic;
+import org.mockito.Mockito;
 
 import java.sql.*;
 import java.time.LocalDateTime;
@@ -12,6 +13,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.spy;
 
 class DisasterDAOTest {
 
