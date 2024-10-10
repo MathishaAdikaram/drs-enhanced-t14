@@ -1,10 +1,11 @@
-package disasterresponse.dao;
+package au.pathum.disasterresponse.dao;
 
-import disasterresponse.models.DisasterMessage;
-import disasterresponse.services.DatabaseUtil;
+import au.pathum.disasterresponse.models.DisasterMessage;
+import au.pathum.disasterresponse.services.DatabaseUtil;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockedStatic;
+import org.mockito.Mockito;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

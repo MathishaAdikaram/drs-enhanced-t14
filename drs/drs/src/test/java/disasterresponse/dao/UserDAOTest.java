@@ -1,10 +1,10 @@
-package disasterresponse.dao;
+package au.pathum.disasterresponse.dao;
 
 import static org.mockito.Mockito.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-import disasterresponse.models.User;
-import disasterresponse.services.DatabaseUtil;
+import au.pathum.disasterresponse.models.User;
+import au.pathum.disasterresponse.services.DatabaseUtil;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -22,10 +22,6 @@ public class UserDAOTest {
     private PreparedStatement mockPreparedStatement;
     private ResultSet mockResultSet;
 
-    /**
-     *
-     * @throws SQLException
-     */
     @BeforeEach
     public void setUp() throws SQLException {
         userDAO = new UserDAO();
@@ -40,10 +36,6 @@ public class UserDAOTest {
 //        when(mockConnection.prepareStatement(anyString())).thenReturn(mockPreparedStatement);
     }
 
-    /**
-     *
-     * @throws SQLException
-     */
     @Test
     public void testGetUserByUsername_Success() throws SQLException {
         // Mock the DatabaseUtil to return the mocked connection
